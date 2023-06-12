@@ -1,0 +1,139 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.home__hero {
+    width: 100%;
+    height: 80vh;
+    background: url("../../assets/img/hero-bg_04.jpg") top center;
+    background-size: cover;
+    position: relative;
+}
+
+.home__hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media (max-width: 992px) {
+    .home__hero .container {
+        padding-top: 62px;
+    }
+}
+
+.home__hero>.container {
+    padding-top: 72px;
+}
+
+.home__hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.home__hero h2 {
+    color: #eee;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+.home__hero .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+.home__hero .btn-get-started:hover {
+    background: #00c0f3;
+    border: 2px solid #00c0f3;
+}
+
+@media (min-width: 1024px) {
+    .home__hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    .home__hero {
+        height: 100vh;
+    }
+
+    .home__hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .home__hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.home__about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+
+.home__why-us__content {
+    padding: 30px;
+    background: #00c0f3;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.home__why-us__content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.home__why-us__content p {
+    margin-bottom: 30px;
+}
+
+.home__why-us__content .more-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+}
+
+.home__why-us__content .more-btn i {
+    font-size: 14px;
+}
+
+.home__why-us__content .more-btn:hover {
+    color: #00c0f3;
+    background: #fff;
+}
+
+

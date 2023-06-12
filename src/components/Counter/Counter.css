@@ -1,0 +1,20 @@
+.counter {
+    padding: 30px 0;
+}
+
+.counter span {
+
+    font-size: 48px;
+    display: block;
+    color: #00c0f3;
+    font-weight: 700;
+}
+
+.counter p {
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #37423b;
+}
