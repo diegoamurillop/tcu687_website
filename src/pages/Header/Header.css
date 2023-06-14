@@ -1,9 +1,10 @@
 .header {
     background: #fff;
     transition: all 0.5s;
-    z-index: 997;
+    z-index: 993;
     padding: 15px 0;
     box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+    position: sticky;
 }
 
 

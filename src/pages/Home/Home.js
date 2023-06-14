@@ -1,10 +1,12 @@
-import Counter from "../../components/Counter/Counter";
 import { Link } from "react-router-dom";
 import IconBox from "../../components/generic/IconBox"
 import "./Home.css";
 import ReglamentoPDF from "../../assets/pdf/Reglamento_TCU.pdf"
 import AboutJPG from "../../assets/img/about.jpg"
-import { useEffect } from "react";
+import { PureComponent, useEffect } from "react";
+import PureCounter from "@srexi/purecounterjs";
+
+
 
 
 
@@ -12,7 +14,20 @@ import { useEffect } from "react";
 
 function Home() {
 
+    
+
+    const counter = (title, start, end) => {
+        return (
+            <div className="col-lg-3 col-6 text-center counter">
+                <span data-purecounter-start={start} data-purecounter-end={end} data-purecounter-duration="1" className="purecounter"></span>
+                <p>{title}</p>
+            </div>
+        )
+    }
+
     useEffect(() => {
+        new PureCounter();
+
       const backtotop = document.querySelector('.back-to-top');
   
       if (backtotop) {
@@ -38,7 +53,7 @@ function Home() {
     return (
         <div className="home">
             <section id="home__hero" className="home__hero d-flex justify-content-center align-items-center">
-                <div className="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+                <div className="container position-relative" data-aos="zoom-in" data-aos-delay="100" >
                     <h1>Trabajo Comunal Universitario 687,<br /> Universidad de Costa Rica</h1>
                     <h2>Creación de espacios de fortalecimiento de habilidades para la vida que prevengan el consumo de drogas en la adolescencia y la juventud.</h2>
                     <Link to="/proyectos" className="btn-get-started">Projectos</Link>
@@ -47,10 +62,10 @@ function Home() {
             </section>
 
             <section id="home__about" className="home__about">
-                <div className="container" data-aos="fade-up">
+                <div className="container" data-aos="fade-up" >
                     <div className="row">
                         <div className="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                            <img src={{AboutJPG}} className="img-fluid" alt="" />
+                            <img src={AboutJPG} className="img-fluid" alt="" />
                         </div>
                         <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                             <h3>Importancia del TCU</h3>
@@ -67,7 +82,14 @@ function Home() {
             </section>
 
             <section id="home__counters" className="home__count">
-                <Counter />
+                <div className="container">
+                        <div className="row">
+                            {counter("Personas Alcanzadas", 0, 350)}
+                            {counter("Colaboradores", 0, 2)}
+                            {counter("Instituciones Involucradas", 0, 4)}
+                            {counter("Proyectos Activos", 0, 3)}
+                        </div>
+                    </div>
             </section>
 
             <div id="home__why-us" className="home__why-us">

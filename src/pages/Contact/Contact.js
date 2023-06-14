@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Contact.css"
 
 
@@ -10,6 +10,7 @@ const Contact = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
 	const [isSent, setIsSent] = useState(false);
+
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -26,14 +27,14 @@ const Contact = () => {
 
 	return (
 		<div id="contact" className="contact">
-			<div id="contact__headline" className="contact__headline" data-aos="fade-in">
+			<div id="contact__headline" className="contact__headline headline mt-5" data-aos="fade-in">
 				<div className="container">
 					<h2>Contáctenos</h2>
 					<p>Si tienes alguna duda o sugerencia, puedes escribirnos y te responderemos lo antes posible.</p>
 				</div>
 			</div>
 
-			<div id="contact__map" className="contact__map" data-aos="fade-up">
+			<div id="contact__map" className="contact__map mt-2" data-aos="fade-up">
 				<iframe
 					title="Dirección de la UCR"
 					style={{ border: 0, width: "100%", height: "350px" }}
@@ -42,94 +43,97 @@ const Contact = () => {
 				></iframe>
 			</div>
 
-			<div class="row mt-5">
 
-				<div class="col-lg-4">
+			<div class="container" data-aos="fade-up">
 
-					<div id="contact__info" className="contact__info" data-aos="fade-up">
-						<div id="contact__adress" className="contact__address">
-							<i className="bi bi-geo-alt"></i>
-							<h4>Location:</h4>
-							<p>SC, Ciudad de la Investigación, frente al INISA</p>
-						</div>
-						<div id="contact__email" className="contact__email">
-							<i className="bi bi-envelope"></i>
-							<h4>Email:</h4>
-							<p>TCU687.EE@ucr.ac.cr</p>
-						</div>
-						<div id="contact__phone" className="contact__phone">
-							<i className="bi bi-phone"></i>
-							<h4>Call:</h4>
-							<p>TBD</p>
+				<div class="row mt-5">
+
+					<div class="col-lg-4">
+
+						<div id="contact__info" className="contact__info" data-aos="fade-up">
+							<div id="contact__adress" className="contact__address">
+								<i className="bi bi-geo-alt"></i>
+								<h4>Dirección:</h4>
+								<p>SC, Ciudad de la Investigación, frente al INISA</p>
+							</div>
+							<div id="contact__email" className="contact__email">
+								<i className="bi bi-envelope"></i>
+								<h4>Correo Electrónico:</h4>
+								<p>TCU687.EE@ucr.ac.cr</p>
+							</div>
+							<div id="contact__phone" className="contact__phone">
+								<i className="bi bi-phone"></i>
+								<h4>Teléfono:</h4>
+								<p>TBD</p>
+							</div>
 						</div>
 					</div>
-				</div>
 
 
-				<div class="col-lg-8 mt-5 mt-lg-0">
+					<div class="col-lg-8 mt-5 mt-lg-0">
 
-					<div id="contact__form" className="contact__form container">
-						<h2>Envíanos un mensaje</h2>
-						<form onSubmit={handleSubmit}>
-							<div className="row">
-								<div className="col-md-6 form-group">
+						<div id="contact__form" className="contact__form container">
+							<form onSubmit={handleSubmit}>
+								<div className="row">
+									<div className="col-md-6 form-group">
+										<input
+											type="text"
+											className="form-control"
+											id="contact__form-name"
+											placeholder="Su Nombre"
+											required
+											value={name}
+											onChange={(e) => setName(e.target.value)}
+										/>
+									</div>
+									<div className="col-md-6 form-group mt-3 mt-md-0">
+										<input
+											type="email"
+											className="form-control"
+											id="contact__form-email"
+											placeholder="Su correo electrónico"
+											required
+											value={email}
+											onChange={(e) => setEmail(e.target.value)}
+										/>
+									</div>
+								</div>
+								<div className="form-group mt-3">
 									<input
 										type="text"
 										className="form-control"
-										id="contact__form-name"
-										placeholder="Su Nombre"
+										id="contact__form-subject"
+										placeholder="Asunto"
 										required
-										value={name}
-										onChange={(e) => setName(e.target.value)}
+										value={subject}
+										onChange={(e) => setSubject(e.target.value)}
 									/>
 								</div>
-								<div className="col-md-6 form-group mt-3 mt-md-0">
-									<input
-										type="email"
+								<div className="form-group mt-3">
+									<textarea
 										className="form-control"
-										id="contact__form-email"
-										placeholder="Su correo electrónico"
+										name="message"
+										id="contact__form-message"
+										rows="5"
+										placeholder="Mensaje"
 										required
-										value={email}
-										onChange={(e) => setEmail(e.target.value)}
-									/>
+										maxLength="1000"
+										value={message}
+										onChange={(e) => setMessage(e.target.value)}
+									></textarea>
 								</div>
-							</div>
-							<div className="form-group mt-3">
-								<input
-									type="text"
-									className="form-control"
-									id="contact__form-subject"
-									placeholder="Asunto"
-									required
-									value={subject}
-									onChange={(e) => setSubject(e.target.value)}
-								/>
-							</div>
-							<div className="form-group mt-3">
-								<textarea
-									className="form-control"
-									name="message"
-									id="contact__form-message"
-									rows="5"
-									placeholder="Mensaje"
-									required
-									maxLength="1000"
-									value={message}
-									onChange={(e) => setMessage(e.target.value)}
-								></textarea>
-							</div>
-							<div className="my-3">
-								{isLoading && <div className="loading">Cargando</div>}
-								{isError && <div className="error-message">Ha ocurrido un error. Por favor intenta de nuevo.</div>}
-								{isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias!</div>}
-							</div>
-							<div className="text-center">
-								<button type="submit">Enviar Mensaje</button>
-							</div>
-						</form>
-					</div>
+								<div className="my-3">
+									{isLoading && <div className="loading">Cargando...</div>}
+									{isError && <div className="error-message">Ha ocurrido un error. Por favor intenta de nuevo.</div>}
+									{isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias! <i/></div>}
+								</div>
+								<div className="text-center">
+									<button type="submit">Enviar Mensaje</button>
+								</div>
+							</form>
+						</div>
 
+					</div>
 				</div>
 			</div>
 		</div>

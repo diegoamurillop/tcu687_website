@@ -16,11 +16,11 @@ function Header() {
                         <ul>
                             <li><NavLink exact="true" to="/" activeclassname="active">Inicio</NavLink></li>
                             <li><NavLink to="/proyectos" activeclassname="active">Proyectos</NavLink></li>
-                            <li><NavLink to="/nosotros" activeclassname="active">Sobre nosotros</NavLink></li>
+                            <li><NavLink to="/sobrenosotros" activeclassname="active">Sobre nosotros</NavLink></li>
                         </ul>
                     </nav>
                 </div>
-                <NavLink to="/contact" className="get-started-btn" activeclassname="active">Contáctenos</NavLink>
+                <NavLink to="/contacto" className="get-started-btn" activeclassname="active">Contáctenos</NavLink>
             </div>
         </header>
     )
