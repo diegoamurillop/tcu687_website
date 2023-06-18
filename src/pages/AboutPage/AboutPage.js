@@ -1,10 +1,12 @@
-import "./About.css";
+import "./AboutPage.css";
 import AboutJPG from "../../assets/img/about.jpg";
 import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
+import Headline from "../../common/Headline/Headline";
+import Counter from "../../common/Counter/Counter";
 
 
-function About() {
+function AboutPage() {
 
     useEffect(() => {
         new PureCounter();
@@ -21,15 +23,14 @@ function About() {
 
 
     return (
-        <div id="about" className="about">
-            <div class="about__headline headline" data-aos="fade-in">
-                <div class="container">
-                    <h2>Sobre Nosotros</h2>
-                    <p>Creación de espacios de fortalecimiento de habilidades para la vida que prevengan el consumo de drogas en la adolescencia y la juventud. </p>
-                </div>
-            </div>
+        <div id="about-page" className="about-page">
 
-            <section class="about__body">
+            <Headline
+                title="Sobre Nosotros"
+                supportText="Creación de espacios de fortalecimiento de habilidades para la vida que prevengan el consumo de drogas en la adolescencia y la juventud."
+            />
+
+            <section class="about-page__body">
                 <div class="container" data-aos="fade-up">
 
                     <div class="row">
@@ -37,7 +38,7 @@ function About() {
                             <img src={AboutJPG} className="img-fluid" alt="" />
 
                         </div>
-                        <div class="about__content col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+                        <div class="about-page__content col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
                             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
                             <p class="fst-italic">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -58,18 +59,26 @@ function About() {
                 </div>
             </section>
 
-            <section class="about__counts section-bg">
+            <section class="about-page__counters section-bg">
                 <div className="container">
                     <div className="row">
-                        {counter("Estudiantes", 0, 350)}
-                        {counter("Charlas", 0, 2)}
-                        {counter("Eventos", 0, 4)}
-                        {counter("Profesores", 0, 3)}
+                        <div className="col-lg-3 col-6 text-center">
+                            <Counter title="Estudiantes" start={0} end={350} />
+                        </div>
+                        <div className="col-lg-3 col-6 text-center">
+                            <Counter title="Charlas" start={0} end={2} />
+                        </div>
+                        <div className="col-lg-3 col-6 text-center">
+                            <Counter title="Eventos" start={0} end={4} />
+                        </div>
+                        <div className="col-lg-3 col-6 text-center">
+                            <Counter title="Profesores" start={0} end={3} />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="about__testimonials">
+            <section class="about-page__testimonials">
 
             </section>
 
@@ -79,7 +88,7 @@ function About() {
     )
 }
 
-export default About;
+export default AboutPage;
 
 
 

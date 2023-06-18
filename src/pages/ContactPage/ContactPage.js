@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import "./Contact.css"
+import { useState } from "react";
+import Headline from "../../common/Headline/Headline";
+import "./ContactPage.css"
 
 
-const Contact = () => {
+const ContactPage = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
@@ -26,15 +27,13 @@ const Contact = () => {
 	};
 
 	return (
-		<div id="contact" className="contact">
-			<div id="contact__headline" className="contact__headline headline mt-5" data-aos="fade-in">
-				<div className="container">
-					<h2>Contáctenos</h2>
-					<p>Si tienes alguna duda o sugerencia, puedes escribirnos y te responderemos lo antes posible.</p>
-				</div>
-			</div>
+		<div id="contact-page" className="contact-page">
+			<Headline
+				title="Contáctenos"
+				supportText="Si tienes alguna duda o sugerencia, puedes escribirnos y te responderemos lo antes posible."
+			/>
 
-			<div id="contact__map" className="contact__map mt-2" data-aos="fade-up">
+			<div id="contact-page__map" className="contact-page__map mt-2" data-aos="fade-up">
 				<iframe
 					title="Dirección de la UCR"
 					style={{ border: 0, width: "100%", height: "350px" }}
@@ -50,18 +49,18 @@ const Contact = () => {
 
 					<div class="col-lg-4">
 
-						<div id="contact__info" className="contact__info" data-aos="fade-up">
-							<div id="contact__adress" className="contact__address">
+						<div id="contact-page__info" className="contact-page__info" data-aos="fade-up">
+							<div id="contact-page__adress" className="contact-page__address">
 								<i className="bi bi-geo-alt"></i>
 								<h4>Dirección:</h4>
 								<p>SC, Ciudad de la Investigación, frente al INISA</p>
 							</div>
-							<div id="contact__email" className="contact__email">
+							<div id="contact-page__email" className="contact-page__email">
 								<i className="bi bi-envelope"></i>
 								<h4>Correo Electrónico:</h4>
 								<p>TCU687.EE@ucr.ac.cr</p>
 							</div>
-							<div id="contact__phone" className="contact__phone">
+							<div id="contact-page__phone" className="contact-page__phone">
 								<i className="bi bi-phone"></i>
 								<h4>Teléfono:</h4>
 								<p>TBD</p>
@@ -72,14 +71,14 @@ const Contact = () => {
 
 					<div class="col-lg-8 mt-5 mt-lg-0">
 
-						<div id="contact__form" className="contact__form container">
+						<div id="contact-page__form" className="contact-page__form container">
 							<form onSubmit={handleSubmit}>
 								<div className="row">
 									<div className="col-md-6 form-group">
 										<input
 											type="text"
 											className="form-control"
-											id="contact__form-name"
+											id="contact-page__form-name"
 											placeholder="Su Nombre"
 											required
 											value={name}
@@ -90,7 +89,7 @@ const Contact = () => {
 										<input
 											type="email"
 											className="form-control"
-											id="contact__form-email"
+											id="contact-page__form-email"
 											placeholder="Su correo electrónico"
 											required
 											value={email}
@@ -102,7 +101,7 @@ const Contact = () => {
 									<input
 										type="text"
 										className="form-control"
-										id="contact__form-subject"
+										id="contact-page__form-subject"
 										placeholder="Asunto"
 										required
 										value={subject}
@@ -113,7 +112,7 @@ const Contact = () => {
 									<textarea
 										className="form-control"
 										name="message"
-										id="contact__form-message"
+										id="contact-page__form-message"
 										rows="5"
 										placeholder="Mensaje"
 										required
@@ -125,7 +124,7 @@ const Contact = () => {
 								<div className="my-3">
 									{isLoading && <div className="loading">Cargando...</div>}
 									{isError && <div className="error-message">Ha ocurrido un error. Por favor intenta de nuevo.</div>}
-									{isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias! <i/></div>}
+									{isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias! <i /></div>}
 								</div>
 								<div className="text-center">
 									<button type="submit">Enviar Mensaje</button>
@@ -140,7 +139,7 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default ContactPage;
 
 
 

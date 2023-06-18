@@ -4,6 +4,11 @@ import "./Header.css"
 
 
 function Header() {
+
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <header id="header" className="header fixed-top">
             <div className="container d-flex align-items-center">
@@ -14,13 +19,14 @@ function Header() {
                 <div className="hader__right d-flex">
                     <nav id="navbar" className="navbar order-last order-lg-0">
                         <ul>
-                            <li><NavLink exact="true" to="/" activeclassname="active">Inicio</NavLink></li>
-                            <li><NavLink to="/proyectos" activeclassname="active">Proyectos</NavLink></li>
-                            <li><NavLink to="/sobrenosotros" activeclassname="active">Sobre nosotros</NavLink></li>
+                            <li><NavLink onClick={handleLinkClick} exact="true" to="/" activeclassname="active">Inicio</NavLink></li>
+                            <li><NavLink onClick={handleLinkClick} to="/proyectos" activeclassname="active">Proyectos</NavLink></li>
+                            <li><NavLink onClick={handleLinkClick} to="/eventos" activeclassname="active">Eventos</NavLink></li>
+                            <li><NavLink onClick={handleLinkClick} to="/sobrenosotros" activeclassname="active">Sobre nosotros</NavLink></li>
                         </ul>
                     </nav>
                 </div>
-                <NavLink to="/contacto" className="get-started-btn" activeclassname="active">Contáctenos</NavLink>
+                <NavLink to="/contacto" onClick={handleLinkClick} className="get-started-btn" activeclassname="active">Contáctenos</NavLink>
             </div>
         </header>
     )

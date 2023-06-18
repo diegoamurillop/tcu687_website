@@ -24,11 +24,12 @@ function Footer() {
                         <div className="col-lg-2 col-md-6 footer__links">
                             <h4>Enlaces de Importancia</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Inicio</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="">Proyectos</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                                <li><i className="bx bx-chevron-right"/> <Link  onClick={handleLinkClick} to ="/">Inicio</Link></li>
+                                <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/proyectos">Proyectos</Link></li>
+                                <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/eventos">Eventos</Link></li>
+                                <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/sobrenosotros">Sobre Nosotros</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to="/contacto">Contáctenos</Link></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="./assets/files/Reglamento_TCU.pdf" target="_blank">Reglamento del TCU</a></li>
+                                <li><i className="bx bx-chevron-right"/> <a hrefw3w="./assets/files/Reglamento_TCU.pdf" target="_blank">Reglamento del TCU</a></li>
                             </ul>
                         </div>
                     </div>

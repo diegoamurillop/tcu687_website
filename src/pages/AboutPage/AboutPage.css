@@ -1,29 +1,33 @@
-.about {
+.about-page {
     margin-top: 70px;
 }
 
 
-.about__content h3 {
+.about-page__counters {
+    padding: 30px 0;
+}
+
+.about-page__content h3 {
     font-weight: 600;
     font-size: 26px;
 }
 
-.about__content ul {
+.about-page__content ul {
     list-style: none;
     padding: 0;
 }
 
-.about__content ul li {
+.about-page__content ul li {
     padding-bottom: 10px;
 }
 
-.about__content ul i {
+.about-page__content ul i {
     font-size: 20px;
     padding-right: 4px;
     color: #00c0f3;
 }
 
-.about__content .learn-more-btn {
+.about-page__content .learn-more-btn {
     background: #00c0f3;
     color: #fff;
     border-radius: 50px;
@@ -34,13 +38,13 @@
     display: inline-block;
 }
 
-.about__content .learn-more-btn:hover {
+.about-page__content .learn-more-btn:hover {
     background: #095fa3;
     color: #fff;
 }
 
 @media (max-width: 768px) {
-    .about__content .learn-more-btn {
+    .about-page__content .learn-more-btn {
         margin: 0 48px 0 0;
         padding: 6px 18px;
     }
