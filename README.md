@@ -2,7 +2,7 @@
 
 Ejectuar el comando 
     1. "npm install -g firebase-tolls". Esto instalará FireBase de manera global. 
-    2. "firebase login". Ingresar con los credenciales de la cuenta del TCU. Correo: tcu687.website@gmail.com Contraseña: RpT5gr&5bKZ1
+    2. "firebase login". Ingresar con los credenciales de la cuenta del TCU. Correo: tcu687.website@gmail.com 
     3. "
 
 
