@@ -13,14 +13,12 @@ import "boxicons/css/boxicons.min.css"
 import { Routes, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage/AboutPage';
 import "./App.css";
-import PureCounter from "@srexi/purecounterjs";
 import EventPage from './pages/EventPage/EventPage';
 
 function App() {
 
   useEffect(() => {
     AOS.init({ duration: 1200});
-    new PureCounter();
   }, [])
 
 

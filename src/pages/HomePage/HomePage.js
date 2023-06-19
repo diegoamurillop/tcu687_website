@@ -3,10 +3,11 @@ import IconBox from "../../common/IconBox/IconBox"
 import "./HomePage.css";
 import ReglamentoPDF from "../../assets/pdf/Reglamento_TCU.pdf"
 import AboutJPG from "../../assets/img/about.jpg"
-import { PureComponent, useEffect } from "react";
+import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import Counter from "../../common/Counter/Counter";
 import ProjectList from "../../components/ProjectList/ProjectList";
+import BackToTop from "../../common/BackToTop/BackToTop";
 
 
 
@@ -16,26 +17,6 @@ function HomePage() {
 
     useEffect(() => {
         new PureCounter();
-
-        const backtotop = document.querySelector('.back-to-top');
-
-        if (backtotop) {
-            const toggleBackToTop = () => {
-                if (window.scrollY > 100) {
-                    backtotop.classList.add('active');
-                } else {
-                    backtotop.classList.remove('active');
-                }
-            };
-
-            window.addEventListener('load', toggleBackToTop);
-            window.addEventListener('scroll', toggleBackToTop);
-
-            return () => {
-                window.removeEventListener('load', toggleBackToTop);
-                window.removeEventListener('scroll', toggleBackToTop);
-            };
-        }
     }, []);
 
 
@@ -98,7 +79,7 @@ function HomePage() {
                                 <p>
                                     Es importante saber que en el TCU-687 se abarcan diversos temas que son de ayuda para poder abordar la población meta y con ello cumplir con el objetivo. De esta forma, al inicio del tcu se brinda una inducción facilitada por parte de los y las mismas estudiantes del tcu dirigida para las y los estudiantes nuevos. En dicha inducción se profundizará en los tres principales ejes del tcu: adolescencia, sustancias psicoactivas y habilidades para la vida.
                                 </p>
-                                <a href={ReglamentoPDF} download="Reglamento_TCU.pdf" target="_blank" className="more-btn text-center">Reglamento del TCU<i className="bx bx-chevron-right"></i></a>
+                                <a href={ReglamentoPDF} download="Reglamento_TCU.pdf" className="more-btn text-center">Reglamento del TCU<i className="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
                         <div className="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -133,10 +114,6 @@ function HomePage() {
                 </div>
             </div>
 
-            <a href="#" className="back-to-top d-flex align-items-center justify-content-center">
-                <i className="bi bi-arrow-up-short"></i>
-            </a>
-
             <section id="home-page__projects" class="courses">
                 <div className="container" data-aos="fade-up">
                     <div class="section-title">
@@ -148,7 +125,7 @@ function HomePage() {
                 </div>
             </section>
 
-
+            <BackToTop />
 
         </div>
     )

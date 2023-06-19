@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Headline from "../../common/Headline/Headline";
 import "./ContactPage.css"
+import BackToTop from "../../common/BackToTop/BackToTop";
 
 
 const ContactPage = () => {
@@ -9,7 +10,7 @@ const ContactPage = () => {
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
-	const [isError, setIsError] = useState(false);
+	const [isError ] = useState(false);
 	const [isSent, setIsSent] = useState(false);
 
 
@@ -135,6 +136,8 @@ const ContactPage = () => {
 					</div>
 				</div>
 			</div>
+
+			<BackToTop />
 		</div>
 	);
 };

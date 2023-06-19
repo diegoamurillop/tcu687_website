@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import Headline from "../../common/Headline/Headline";
 import Counter from "../../common/Counter/Counter";
+import BackToTop from "../../common/BackToTop/BackToTop";
 
 
 function AboutPage() {
@@ -11,15 +12,6 @@ function AboutPage() {
     useEffect(() => {
         new PureCounter();
     }, []);
-
-    const counter = (title, start, end) => {
-        return (
-            <div className="col-lg-3 col-6 text-center counter">
-                <span data-purecounter-start={start} data-purecounter-end={end} data-purecounter-duration="1" className="purecounter"></span>
-                <p>{title}</p>
-            </div>
-        )
-    }
 
 
     return (
@@ -82,9 +74,10 @@ function AboutPage() {
 
             </section>
 
+            <BackToTop />
         </div>
 
-
+        
     )
 }
 

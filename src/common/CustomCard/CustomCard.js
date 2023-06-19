@@ -1,5 +1,3 @@
-import { ListGroup } from "react-bootstrap"
-import InstitudJPG from "../../assets/img/municipalidad_curridabat_02.jpg"
 import Card from 'react-bootstrap/Card';
 import "./CustomCard.css"
 
