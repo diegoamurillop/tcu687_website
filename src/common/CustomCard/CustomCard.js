@@ -1,0 +1,24 @@
+import Card from 'react-bootstrap/Card';
+import "./CustomCard.css"
+
+function CustomCard({ img, tag, title, description, }) {
+
+    return (
+        <Card >
+            <Card.Img variant="top" src={img} />
+            <Card.Body>
+                {tag && 
+                (<div className="d-flex mb-3">
+                    <h4 className="card-tag">{tag}</h4>
+                </div>) 
+                }
+                <Card.Title as="h3">{title}</Card.Title>
+                <Card.Text>
+                    {description}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+    )
+}
+
+export default CustomCard;
