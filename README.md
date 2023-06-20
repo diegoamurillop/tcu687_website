@@ -1,9 +1,23 @@
+# Install the project
+```
+    npm install --loglevel=error
+```
 # Deploying a FireBase
+Instalar firebase global: 
+```
+npm install -g firebase-tolls
+```
+Ingressar a firebase utilizando la cuenta tcu687.website@gmail.com:
+```
+firebase login
+```
+Para hacer deploy a firebase desde local. 
+> **WARNING**
+> Github main branch has automatic aciton for firebase deploy on PR and MR. 
+```
+firebase deploy
+```
 
-Ejectuar el comando 
-    1. "npm install -g firebase-tolls". Esto instalará FireBase de manera global. 
-    2. "firebase login". Ingresar con los credenciales de la cuenta del TCU. Correo: tcu687.website@gmail.com 
-    3. "
 
 
 
