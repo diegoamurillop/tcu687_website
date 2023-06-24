@@ -14,7 +14,6 @@ function EventPage() {
                 <EventList />
             </section>
 
-            <BackToTop />
         </div>
     )
 }

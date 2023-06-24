@@ -13,8 +13,6 @@ function ProjectPage() {
             <section id="project-page__projects" className="project-page__projects container">
                 <ProjectList />
             </section>
-
-            <BackToTop />
         </div>
 
     )

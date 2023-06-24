@@ -1,10 +1,10 @@
 import "./AboutPage.css";
-import AboutJPG from "../../assets/img/about.jpg";
+import { Col, Container, Row } from "react-bootstrap";
 import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import Headline from "../../common/Headline/Headline";
 import Counter from "../../common/Counter/Counter";
-import BackToTop from "../../common/BackToTop/BackToTop";
+import AboutJPG from "../../assets/img/about.jpg";
 
 
 function AboutPage() {
@@ -23,58 +23,48 @@ function AboutPage() {
             />
 
             <section class="about-page__body">
-                <div class="container" data-aos="fade-up">
-
-                    <div class="row">
-                        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <Container data-aos="fade-up">
+                    <Row>
+                        <Col lg={{span: 6, order: 2}} md={{order:1}} data-aos="fade-left" data-aos-delay="100">
                             <img src={AboutJPG} className="img-fluid" alt="" />
-
-                        </div>
-                        <div class="about-page__content col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+                        </Col>
+                        <Col lg={{span: 6, order: 1}} md={{order: 2}} class="about-page__content pt-4 pt-lg-0">
                             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
                             <p class="fst-italic">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                                 magna aliqua.
                             </p>
                             <ul>
-                                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                                <li><i class="bi bi-check-circle"/> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                <li><i class="bi bi-check-circle"/> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                                <li><i class="bi bi-check-circle"/> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
                             </ul>
                             <p>
                                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                             </p>
-
-                        </div>
-                    </div>
-
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
 
             <section class="about-page__counters section-bg">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3 col-6 text-center">
+                <Container>
+                    <Row>
+                        <Col lg={3} md={6}>
                             <Counter title="Estudiantes" start={0} end={350} />
-                        </div>
-                        <div className="col-lg-3 col-6 text-center">
+                        </Col>
+                         <Col lg={3} md={6}>
                             <Counter title="Charlas" start={0} end={2} />
-                        </div>
-                        <div className="col-lg-3 col-6 text-center">
+                        </Col>
+                         <Col lg={3} md={6}>
                             <Counter title="Eventos" start={0} end={4} />
-                        </div>
-                        <div className="col-lg-3 col-6 text-center">
+                        </Col>
+                         <Col lg={3} md={6}>
                             <Counter title="Profesores" start={0} end={3} />
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
-
-            <section class="about-page__testimonials">
-
-            </section>
-
-            <BackToTop />
         </div>
 
         

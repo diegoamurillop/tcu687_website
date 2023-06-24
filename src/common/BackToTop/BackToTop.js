@@ -32,7 +32,7 @@ function BackToTop() {
 
     return (
         <Button onClick={backToTop} className="back-to-top d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="80">
-                <i className="bi bi-arrow-up-short"></i>
+                <i className="bi bi-arrow-up-short"/>
         </Button>
     );
 }
