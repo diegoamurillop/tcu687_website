@@ -1,3 +1,26 @@
+# Install the project
+```
+    npm install --loglevel=error
+```
+# Deploying a FireBase
+Instalar firebase global: 
+```
+npm install -g firebase-tolls
+```
+Ingressar a firebase utilizando la cuenta tcu687.website@gmail.com:
+```
+firebase login
+```
+Para hacer deploy a firebase desde local. 
+> **WARNING**
+> Github main branch has automatic aciton for firebase deploy on PR and MR. 
+```
+firebase deploy
+```
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
