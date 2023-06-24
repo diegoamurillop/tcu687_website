@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import LogoImg from "../../assets/img/logo.jpg";
 import "./Header.css"
+import { Container } from "react-bootstrap";
 
 
 
@@ -11,10 +13,12 @@ function Header() {
 
     return (
         <header id="header" className="header fixed-top">
-            <div className="container d-flex align-items-center">
+            <Container className="d-flex align-items-center">
                 <div id="header__left" className="header__left me-auto">
-                    {/* REWORK REDIRECT */}
-                    <h1 className="logo"><a href="index.html">TCU-687</a></h1>
+                    <Link as="div" onClick={handleLinkClick} exact="true" to="/" className="d-flex align-items-center">
+                        <img src={LogoImg} alt="Logo" />
+                        <h1 className="logo ms-2 mt-2">TC-687</h1>
+                    </Link>
                 </div>
                 <div className="hader__right d-flex">
                     <nav id="navbar" className="navbar order-last order-lg-0">
@@ -27,7 +31,7 @@ function Header() {
                     </nav>
                 </div>
                 <NavLink to="/contacto" onClick={handleLinkClick} className="get-started-btn" activeclassname="active">Contáctenos</NavLink>
-            </div>
+            </Container>
         </header>
     )
 }
