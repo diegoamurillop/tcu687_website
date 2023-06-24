@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "img": "img/municipalidad_curridabat_02.jpg",
+            "tag": "Impacto Social",
+            "title": "Municipalidad de Curridabat",
+            "description": "La creación de espacios y proyectos por parte de las personas estudiantes del TCU 687 dentro de la Municipalidad de Curridabat es fundamental puesto que contribuye al desarrollo y crecimiento de la comunidad local. Algunos proyectos realizados fueron: El Hangar, talleres participativos, recolección de residuos en el Parque la Amistad, apoyo y coordinación de actividades en el Centro Gastronómico del SURÁ, entre otras."
+        },
+        {
+            "img": "img/social_networks.jpg",
+            "tag": "Presencia Digital",
+            "title": "Redes Sociales",
+            "description": "El proyecto de Redes Sociales en el TCU 687 tiene como objetivo utilizar las diversas herramientas digitales como lo son Instagram, Facebook, Tiktok y Spotify para poder facilitar información acerca diferentes temáticas que se abordan durante el TCU, y con ello sensibilizar y concientizar a las y los usuarios."
+        },
+        {
+            "img": "img/municipalidad_curridabat_03.jpg",
+            "tag": "Presencia Digital",
+            "title": "Talleres Socioeducativos",
+            "description": "Como parte del TCU 687 las personas estudiantes podrán realizar talleres a diferentes tipos de poblaciones desde niñez hasta adulta mayor. En la cual, desarrollan diferentes temáticas como salud mental, ansiedad, habilidades para la vida. Dentro de los talleres las personas estudiantes deberán brindar teoría del tema, crear material informativo, infografías, entre otros."
+        }
+    ]
+}

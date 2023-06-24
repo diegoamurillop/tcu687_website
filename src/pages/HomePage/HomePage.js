@@ -9,7 +9,7 @@ import Counter from "../../common/Counter/Counter";
 import ProjectList from "../../components/ProjectList/ProjectList";
 import BackToTop from "../../common/BackToTop/BackToTop";
 import { Col, Container, Row } from "react-bootstrap";
-
+import projectsJSON from "../../data/projects/projects.json";
 
 
 
@@ -119,7 +119,8 @@ function HomePage() {
                         <p>Últimos Proyectos</p>
                     </div>
 
-                    <ProjectList />
+
+                    <ProjectList projects={projectsJSON.projects.slice(0, 3)} />
                 </Container>
             </section>
 

@@ -21,7 +21,7 @@ function App() {
     AOS.init({ duration: 1200});
   }, [])
 
-
+  
   return (
     <div id="app" className="app">
       <Header />

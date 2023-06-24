@@ -1,6 +1,6 @@
 import EventList from "../../components/EventList/EventList";
 import Headline from "../../common/Headline/Headline";
-import BackToTop from "../../common/BackToTop/BackToTop";
+import "./EventPage.css"
 
 function EventPage() {
 
