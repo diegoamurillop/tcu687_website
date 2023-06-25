@@ -3,8 +3,8 @@ import "./ContactForm.css";
 import { Button, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 
-
 function ContactForm() {
+    
     const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
@@ -12,15 +12,15 @@ function ContactForm() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError] = useState(false);
 	const [isSent, setIsSent] = useState(false);
-
+    
     const handleSubmit = (e) => {
         setIsSent(false);
 		e.preventDefault();
 		setIsLoading(true);
-
-		// Perform form submission logic here (e.g., AJAX request)
-
-		// Simulating a delay of 1 second before showing success message
+        console.log(name);
+        if(name === 'Diego'){
+            console.log('Hola Diego');
+        }
 		setTimeout(() => {
 			setIsLoading(false);
 			setIsSent(true);

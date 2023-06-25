@@ -111,9 +111,9 @@ function HomePage() {
                 </Container>
             </div>
 
-            <section id="home-page__projects" class="courses">
+            <section id="home-page__projects" className="courses">
                 <Container data-aos="fade-up">
-                    <div class="section-title">
+                    <div className="section-title">
                         <h2>Proyectos</h2>
                         <p>Últimos Proyectos</p>
                     </div>
