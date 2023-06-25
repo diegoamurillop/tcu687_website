@@ -1,4 +1,4 @@
-dev: 
+env: 
   CI: false
 
 name: Deploy to Firebase Hosting on merge
