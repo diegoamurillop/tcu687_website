@@ -1,33 +1,10 @@
 import "./ContactPage.css"
-import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headline from "../../common/Headline/Headline";
 import ContactForm from "../../components/ContactForm/ContactForm";
 
 
 const ContactPage = () => {
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [subject, setSubject] = useState('');
-	const [message, setMessage] = useState('');
-	const [isLoading, setIsLoading] = useState(false);
-	const [isError] = useState(false);
-	const [isSent, setIsSent] = useState(false);
-
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		setIsLoading(true);
-
-		// Perform form submission logic here (e.g., AJAX request)
-
-		// Simulating a delay of 1 second before showing success message
-		setTimeout(() => {
-			setIsLoading(false);
-			setIsSent(true);
-		}, 1000);
-	};
-
 	return (
 		<div id="contact-page" className="contact-page">
 			<Headline
@@ -40,7 +17,7 @@ const ContactPage = () => {
 					title="Dirección de la UCR"
 					style={{ border: 0, width: "100%", height: "350px" }}
 					src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.936985011398!2d-84.04815938450905!3d9.939201292892896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e477ccfe5c27%3A0x8461492efc1f0192!2sUCR%2C%20Escuela%20de%20Enfermer%C3%ADa%20(EE)!5e0!3m2!1ses-419!2scr!4v1677737343866!5m2!1ses-419!2scr"
-					allowfullscreen
+					allowFullScreen
 				></iframe>
 			</div>
 
