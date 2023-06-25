@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import Counter from "../../common/Counter/Counter";
 import ProjectList from "../../components/ProjectList/ProjectList";
-import BackToTop from "../../common/BackToTop/BackToTop";
 import { Col, Container, Row } from "react-bootstrap";
 import projectsJSON from "../../data/projects/projects.json";
 

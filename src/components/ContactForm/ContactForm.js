@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ContactForm.css";
-import { Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
+import Form from 'react-bootstrap/Form';
 
 
 function ContactForm() {
@@ -13,6 +14,7 @@ function ContactForm() {
 	const [isSent, setIsSent] = useState(false);
 
     const handleSubmit = (e) => {
+        setIsSent(false);
 		e.preventDefault();
 		setIsLoading(true);
 
@@ -27,12 +29,11 @@ function ContactForm() {
 
     return (
         <div id="contact-form" className="contact-form">
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col md={6}>
-                        <input
+                        <Form.Control
                             type="text"
-                            className="form-control"
                             id="contact-page__form-name"
                             placeholder="Su Nombre"
                             required
@@ -41,9 +42,8 @@ function ContactForm() {
                         />
                     </Col>
                     <Col md={6} className="mt-3 mt-md-0">
-                        <input
+                        <Form.Control
                             type="email"
-                            className="form-control"
                             id="contact-page__form-email"
                             placeholder="Su correo electrónico"
                             required
@@ -54,9 +54,8 @@ function ContactForm() {
                 </Row>
 
                 <div className="mt-3">
-                    <input
+                    <Form.Control
                         type="text"
-                        className="form-control"
                         id="contact-page__form-subject"
                         placeholder="Asunto"
                         required
@@ -65,8 +64,8 @@ function ContactForm() {
                     />
                 </div>
                 <div className="mt-3">
-                    <textarea
-                        className="form-control"
+                    <Form.Control
+                        as="textarea"
                         name="message"
                         id="contact-page__form-message"
                         rows="5"
@@ -78,14 +77,14 @@ function ContactForm() {
                     />
                 </div>
                 <div className="my-3">
-                    {isLoading && <div className="loading">Cargando...</div>}
+                    {isLoading && <div className="loading">Enviando...</div>}
                     {isError && <div className="error-message">Ha ocurrido un error. Por favor intenta de nuevo.</div>}
                     {isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias! </div>}
                 </div>
                 <div className="text-center">
-                    <button type="submit">Enviar Mensaje</button>
+                    <Button disabled={isLoading} type="submit">Enviar Mensaje</Button>
                 </div>
-            </form>
+            </Form>
         </div>
     )
 }
