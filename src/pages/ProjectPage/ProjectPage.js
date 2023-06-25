@@ -1,6 +1,7 @@
 import ProjectList from "../../components/ProjectList/ProjectList";
 import Headline from "../../common/Headline/Headline";
-import BackToTop from "../../common/BackToTop/BackToTop";
+import projectsJSON from "../../data/projects/projects.json";
+import "./ProjectPage.css"
 
 function ProjectPage() {
 
@@ -11,10 +12,8 @@ function ProjectPage() {
                 supportText="Conoce los proyectos que hemos realizado en el pasado y los que estamos realizando actualmente."
             />
             <section id="project-page__projects" className="project-page__projects container">
-                <ProjectList />
+                <ProjectList projects={projectsJSON.projects} />
             </section>
-
-            <BackToTop />
         </div>
 
     )

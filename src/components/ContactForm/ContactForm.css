@@ -1,0 +1,14 @@
+.contact-form button[type=submit] {
+    background: #00c0f3;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  .contact-form button[type=submit]:hover {
+    background: #095fa3;
+  }
+  
+  

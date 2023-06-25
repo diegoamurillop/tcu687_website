@@ -1,7 +1,8 @@
-import { useState } from "react";
-import Headline from "../../common/Headline/Headline";
 import "./ContactPage.css"
-import BackToTop from "../../common/BackToTop/BackToTop";
+import { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import Headline from "../../common/Headline/Headline";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 
 const ContactPage = () => {
@@ -10,7 +11,7 @@ const ContactPage = () => {
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
-	const [isError ] = useState(false);
+	const [isError] = useState(false);
 	const [isSent, setIsSent] = useState(false);
 
 
@@ -34,7 +35,7 @@ const ContactPage = () => {
 				supportText="Si tienes alguna duda o sugerencia, puedes escribirnos y te responderemos lo antes posible."
 			/>
 
-			<div id="contact-page__map" className="contact-page__map mt-2" data-aos="fade-up">
+			<div id="contact-page__map" className="contact-page__map mt-3" data-aos="fade-up">
 				<iframe
 					title="Dirección de la UCR"
 					style={{ border: 0, width: "100%", height: "350px" }}
@@ -43,101 +44,37 @@ const ContactPage = () => {
 				></iframe>
 			</div>
 
-
-			<div class="container" data-aos="fade-up">
-
-				<div class="row mt-5">
-
-					<div class="col-lg-4">
-
-						<div id="contact-page__info" className="contact-page__info" data-aos="fade-up">
-							<div id="contact-page__adress" className="contact-page__address">
-								<i className="bi bi-geo-alt"></i>
-								<h4>Dirección:</h4>
-								<p>SC, Ciudad de la Investigación, frente al INISA</p>
+			<section id="contact-page__body" className="contact-page__body">
+				<Container data-aos="fade-up">
+					<Row>
+						<Col lg={4} className="col-lg-4" data-aos="fade-up">
+							<div id="contact-page__info" className="contact-page__info">
+								<div id="contact-page__adress" className="contact-page__address">
+									<i className="bi bi-geo-alt"/>
+									<h4>Dirección:</h4>
+									<p>SC, Ciudad de la Investigación, frente al INISA</p>
+								</div>
+								<div id="contact-page__email" className="contact-page__email">
+									<i className="bi bi-envelope" />
+									<h4>Correo Electrónico:</h4>
+									<p>TCU687.EE@ucr.ac.cr</p>
+								</div>
+								<div id="contact-page__phone" className="contact-page__phone">
+									<i className="bi bi-phone" />
+									<h4>Teléfono:</h4>
+									<p>TBD</p>
+								</div>
 							</div>
-							<div id="contact-page__email" className="contact-page__email">
-								<i className="bi bi-envelope"></i>
-								<h4>Correo Electrónico:</h4>
-								<p>TCU687.EE@ucr.ac.cr</p>
-							</div>
-							<div id="contact-page__phone" className="contact-page__phone">
-								<i className="bi bi-phone"></i>
-								<h4>Teléfono:</h4>
-								<p>TBD</p>
-							</div>
-						</div>
-					</div>
+						</Col>
+						<Col lg={8} className="mt-4 mt-lg-0">
+							<Container id="contact-page__form" className="contact-page__form">
+								<ContactForm />
+							</Container>
+						</Col>
+					</Row>
+				</Container>
+			</section>
 
-
-					<div class="col-lg-8 mt-5 mt-lg-0">
-
-						<div id="contact-page__form" className="contact-page__form container">
-							<form onSubmit={handleSubmit}>
-								<div className="row">
-									<div className="col-md-6 form-group">
-										<input
-											type="text"
-											className="form-control"
-											id="contact-page__form-name"
-											placeholder="Su Nombre"
-											required
-											value={name}
-											onChange={(e) => setName(e.target.value)}
-										/>
-									</div>
-									<div className="col-md-6 form-group mt-3 mt-md-0">
-										<input
-											type="email"
-											className="form-control"
-											id="contact-page__form-email"
-											placeholder="Su correo electrónico"
-											required
-											value={email}
-											onChange={(e) => setEmail(e.target.value)}
-										/>
-									</div>
-								</div>
-								<div className="form-group mt-3">
-									<input
-										type="text"
-										className="form-control"
-										id="contact-page__form-subject"
-										placeholder="Asunto"
-										required
-										value={subject}
-										onChange={(e) => setSubject(e.target.value)}
-									/>
-								</div>
-								<div className="form-group mt-3">
-									<textarea
-										className="form-control"
-										name="message"
-										id="contact-page__form-message"
-										rows="5"
-										placeholder="Mensaje"
-										required
-										maxLength="1000"
-										value={message}
-										onChange={(e) => setMessage(e.target.value)}
-									></textarea>
-								</div>
-								<div className="my-3">
-									{isLoading && <div className="loading">Cargando...</div>}
-									{isError && <div className="error-message">Ha ocurrido un error. Por favor intenta de nuevo.</div>}
-									{isSent && <div className="sent-message">Su mensaje ha sido enviado, Gracias! <i /></div>}
-								</div>
-								<div className="text-center">
-									<button type="submit">Enviar Mensaje</button>
-								</div>
-							</form>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<BackToTop />
 		</div>
 	);
 };

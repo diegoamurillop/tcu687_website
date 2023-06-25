@@ -1,13 +1,14 @@
 
-.icon-boxes .icon-box {
+.icon-box {
     text-align: center;
     background: #fff;
     padding: 40px 30px;
     width: 100%;
     border: 1px solid #eef0ef;
+    border-radius: 4px;
 }
 
-.icon-boxes .icon-box i {
+.icon-box i {
     font-size: 32px;
     padding: 18px;
     color: #00c0f3;
@@ -16,13 +17,13 @@
     border-radius: 50px;
 }
 
-.icon-boxes .icon-box h4 {
+.icon-box h4 {
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 30px 0;
 }
 
-.icon-boxes .icon-box p {
+.icon-box p {
     font-size: 15px;
     color: #848484;
 }

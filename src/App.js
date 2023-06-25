@@ -1,31 +1,30 @@
 import { useEffect } from 'react';
-import Header from './pages/Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
-import Footer from './pages/Footer/Footer';
-import AOS from 'aos';
 import ContactPage from './pages/ContactPage/ContactPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import EventPage from './pages/EventPage/EventPage';
+import BackToTop from './common/BackToTop/BackToTop';
 import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import './css/style.css';
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "boxicons/css/boxicons.min.css"
-import { Routes, Route } from 'react-router-dom';
-import AboutPage from './pages/AboutPage/AboutPage';
 import "./App.css";
-import EventPage from './pages/EventPage/EventPage';
 
 function App() {
-
+  
   useEffect(() => {
     AOS.init({ duration: 1200});
   }, [])
 
-
+  
   return (
     <div id="app" className="app">
       <Header />
-
       <div id="app__body" className="app__body">
         <Routes>
           <Route path={"/"} element={<HomePage />} />
@@ -33,18 +32,14 @@ function App() {
           <Route path="/sobrenosotros" element={<AboutPage />} />
           <Route path="/proyectos" element={<ProjectPage />} />
           <Route path="/eventos" element={<EventPage />} />
-
-
-
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
+
       {/* <div id="preloader"/> */}
     </div>
   );
 }
-
-// q: how to add more than one path to route?
-// a: use the "element" prop instead of "component" prop
 
 export default App;
