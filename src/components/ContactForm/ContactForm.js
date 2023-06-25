@@ -2,30 +2,46 @@ import { useState } from "react";
 import "./ContactForm.css";
 import { Button, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
+import axios from "axios";
 
 function ContactForm() {
-    
+
     const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [subject, setSubject] = useState('');
-	const [message, setMessage] = useState('');
-	const [isLoading, setIsLoading] = useState(false);
-	const [isError] = useState(false);
-	const [isSent, setIsSent] = useState(false);
-    
-    const handleSubmit = (e) => {
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
+    const [isSent, setIsSent] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
         setIsSent(false);
-		e.preventDefault();
-		setIsLoading(true);
-        console.log(name);
-        if(name === 'Diego'){
-            console.log('Hola Diego');
+        setIsError(false);
+        setIsLoading(true);
+        
+        var mailRequest = {
+            toEmails: ["tc687.website@gmail.com"],
+            fromEmail: email,
+            subject: `Consulta Página Web de ${name}: ${subject}`,
+            message: message
         }
-		setTimeout(() => {
-			setIsLoading(false);
-			setIsSent(true);
-		}, 1000);
-	};
+        console.log(mailRequest);
+
+        await axios.post('https://localhost:7000/api/sendEmail', mailRequest).then(
+            (response) => {
+                console.log(response);
+                if (response.status === 200) {
+                    setIsSent(true);
+                }
+            }).catch((error) => {
+                setIsError(true);
+                console.log(error);
+            });
+
+        setIsLoading(false);
+    };
 
     return (
         <div id="contact-form" className="contact-form">
@@ -59,6 +75,7 @@ function ContactForm() {
                         id="contact-page__form-subject"
                         placeholder="Asunto"
                         required
+                        maxLength="100"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                     />
