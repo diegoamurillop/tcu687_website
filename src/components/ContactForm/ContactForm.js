@@ -3,8 +3,9 @@ import "./ContactForm.css";
 import { Button, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 
-
 function ContactForm() {
+    
+    /* eslint-disable no-unused-vars */
     const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [subject, setSubject] = useState('');
@@ -12,7 +13,8 @@ function ContactForm() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError] = useState(false);
 	const [isSent, setIsSent] = useState(false);
-
+    /* eslint-enable no-unused-vars */
+    
     const handleSubmit = (e) => {
         setIsSent(false);
 		e.preventDefault();
