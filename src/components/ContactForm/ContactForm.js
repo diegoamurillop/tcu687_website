@@ -19,7 +19,7 @@ function ContactForm() {
         setIsError(false);
         setIsLoading(true);
         
-        emailjs.sendForm('service_hirfhcq', 'template_docyabi',  form.current, '2vsj-iXgzrayjp8p7')
+        await emailjs.sendForm('service_hirfhcq', 'template_docyabi',  form.current, '2vsj-iXgzrayjp8p7')
         .then((result) => {
             console.log(result.text);
             setIsSent(true);
