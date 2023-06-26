@@ -2,7 +2,7 @@
 ```
     npm install --loglevel=error
 ```
-# Deploying a FireBase
+# Deploying to FireBase
 Instalar firebase global: 
 ```
 npm install -g firebase-tolls
@@ -13,10 +13,20 @@ firebase login
 ```
 Para hacer deploy a firebase desde local. 
 > **WARNING**
-> Github main branch has automatic aciton for firebase deploy on PR and MR. 
+> Github main branch has automatic action for firebase deploy on PR and MR. 
 ```
 firebase deploy
 ```
+
+# Email.js Configuration
+
+Username and password: 
+```
+Username: tcu687.website@gmail.com
+Password: L6*?5ckgSWw&C49
+Service ID: service_hirfhcq
+```
+
 
 
 

@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./ContactForm.css";
 import { Button, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
-import axios from "axios";
+import emailjs from '@emailjs/browser'
 
 function ContactForm() {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     const [isSent, setIsSent] = useState(false);
+
+    const form = useRef();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,31 +19,21 @@ function ContactForm() {
         setIsError(false);
         setIsLoading(true);
         
-        var mailRequest = {
-            toEmails: ["tc687.website@gmail.com"],
-            fromEmail: email,
-            subject: `Consulta Página Web de ${name}: ${subject}`,
-            message: message
-        }
-        console.log(mailRequest);
-
-        await axios.post('https://localhost:7000/api/sendEmail', mailRequest).then(
-            (response) => {
-                console.log(response);
-                if (response.status === 200) {
-                    setIsSent(true);
-                }
-            }).catch((error) => {
-                setIsError(true);
-                console.log(error);
-            });
+        emailjs.sendForm('service_hirfhcq', 'template_docyabi',  form.current, '2vsj-iXgzrayjp8p7')
+        .then((result) => {
+            console.log(result.text);
+            setIsSent(true);
+        }, (error) => {
+            console.log(error.text);
+            setIsError(true);
+        });
 
         setIsLoading(false);
     };
 
     return (
         <div id="contact-form" className="contact-form">
-            <Form onSubmit={handleSubmit}>
+            <Form ref={form} onSubmit={handleSubmit}>
                 <Row>
                     <Col md={6}>
                         <Form.Control
@@ -53,8 +41,7 @@ function ContactForm() {
                             id="contact-page__form-name"
                             placeholder="Su Nombre"
                             required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            name="user_name"
                         />
                     </Col>
                     <Col md={6} className="mt-3 mt-md-0">
@@ -63,8 +50,7 @@ function ContactForm() {
                             id="contact-page__form-email"
                             placeholder="Su correo electrónico"
                             required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            name="user_email"
                         />
                     </Col>
                 </Row>
@@ -76,8 +62,7 @@ function ContactForm() {
                         placeholder="Asunto"
                         required
                         maxLength="100"
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
+                        name="subject"
                     />
                 </div>
                 <div className="mt-3">
@@ -89,8 +74,7 @@ function ContactForm() {
                         placeholder="Mensaje"
                         required
                         maxLength="1000"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        name="message"
                     />
                 </div>
                 <div className="my-3">

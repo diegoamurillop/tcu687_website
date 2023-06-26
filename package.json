@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@emailjs/browser": "^3.11.0",
     "@srexi/purecounterjs": "^1.5.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^3.0.0-beta.6",
-    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
     "boxicons": "^2.1.4",
