@@ -13,7 +13,7 @@ function CustomCard({ img, tag, title, description, }) {
                 </div>) 
                 }
                 <Card.Title as="h3">{title}</Card.Title>
-                <Card.Text>
+                <Card.Text className="text-justify">
                     {description}
                 </Card.Text>
             </Card.Body>

@@ -5,7 +5,7 @@ const IconBox = ({icon, title, text}) => {
         <div className="icon-box">
             <i className= {`bx ${icon}`}/>
             <h4>{title}</h4>
-            <p>{text}</p>
+            <p className="text-justify">{text}</p>
         </div>
     );
 }

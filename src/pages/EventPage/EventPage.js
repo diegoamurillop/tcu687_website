@@ -1,5 +1,6 @@
 import EventList from "../../components/EventList/EventList";
 import Headline from "../../common/Headline/Headline";
+import eventsJSON from "../../data/events/events.json";
 import "./EventPage.css"
 
 function EventPage() {
@@ -11,7 +12,7 @@ function EventPage() {
                 supportText="Conoce los eventos que hemos realizado en el pasado y los que estamos realizando actualmente."
             />
             <section id="event-page__events" className="event-page__events container">
-                <EventList />
+                <EventList events={eventsJSON.events} />
             </section>
 
         </div>

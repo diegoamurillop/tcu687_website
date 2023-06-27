@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+            "img": "Evento_CharlaSanMateo.jpg",
+            "tag": "Charla Informativa",
+            "title": "Charlas CTP San Mateo",
+            "description": "Charlas informativa sobre el gestión de las emociones, trabajo en equipo, sustancias psicoactivas y comunicación asertiva en el CTP de San Mateo."
+        },
+        {
+            "img": "Evento_FeriaSaludAtlantico.jpg",
+            "tag": "Feria",
+            "title": "Feria de la Salud Sede Atlantico",
+            "description": "Stand informativo sobre habilidades para la vida y sustancias psicoactivas. Se ifnorma mediante actividades interactivas."
+        },
+        {
+            "img": "Evento_UCRSeMueve.jpg",
+            "tag": "Feria",
+            "title": "UCR Se Mueve",
+            "description": "Stand informativo con actividades recreativas e interactivas relacionadas a habilidades para la vida."
+        }
+    ]
+}

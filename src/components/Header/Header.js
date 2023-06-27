@@ -17,7 +17,7 @@ function Header() {
                 <div id="header__left" className="header__left me-auto">
                     <Link as="div" onClick={handleLinkClick} exact="true" to="/" className="d-flex align-items-center">
                         <img src={LogoImg} alt="Logo" />
-                        <h1 className="logo ms-2 mt-2">TC-687</h1>
+                        <h1 className="logo ms-2 mt-2">TCU-687</h1>
                     </Link>
                 </div>
                 <div className="hader__right d-flex">

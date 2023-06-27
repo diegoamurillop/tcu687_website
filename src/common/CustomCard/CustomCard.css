@@ -1,5 +1,7 @@
 
-
+.card{
+  border: 2px solid #e1e1e1 !important;
+}
 
   .card-title {
     font-weight: 700;

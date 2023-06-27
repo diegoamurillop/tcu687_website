@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import ReglamentoPDF from "../../assets/pdf/Reglamento_TCU.pdf"
 
 
 function Footer() {
@@ -29,7 +30,7 @@ function Footer() {
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/eventos">Eventos</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/sobrenosotros">Sobre Nosotros</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to="/contacto">Contáctenos</Link></li>
-                                <li><i className="bx bx-chevron-right"/> <Link hrefw3w="./assets/files/Reglamento_TCU.pdf" >Reglamento del TCU</Link></li>
+                                <li><i className="bx bx-chevron-right"/> <a href={ReglamentoPDF} >Reglamento del TCU</a></li>
                             </ul>
                         </div>
                     </div>
