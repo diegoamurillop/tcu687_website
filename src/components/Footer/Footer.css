@@ -137,24 +137,3 @@
 .footer__credits a:hover {
     color: #00c0f3;
   }
-  
-.footer__social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #00c0f3;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-  }
-  
-.footer__social-links a:hover {
-    background: #095fa3;
-    color: #fff;
-    text-decoration: none;
-  }

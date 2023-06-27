@@ -1,24 +1,43 @@
-# Install the project
+# Setting up the project
+Run the following commands:
 ```
-    npm install --loglevel=error
+    git clone https://github.com/damurillop/tcu687_website.git
+    cd tcu687_website
+    npm install
+    npm start
 ```
+> **Important:**
+> Apply new changes and configuration to **develop** branch and then create a pull request into main once everything is ready for deployment. 
+
+
 # Deploying to FireBase
 Instalar firebase global: 
 ```
 npm install -g firebase-tolls
 ```
-Ingressar a firebase utilizando la cuenta tcu687.website@gmail.com:
-```
-firebase login
-```
-Para hacer deploy a firebase desde local. 
+Ingressar a firebase utilizando la cuenta tcu687.website@gmail.com.
+## Deploy with github Actions
+
+1. Every new feature or configuration change must be push into <strong>develop</strong> branch. 
+
+2. Once it's ready for production deployment, create a new pull request into main. 
+
+3. Make sure all checks pass before merging the pull request.
+
+
+4. Merge the pull request and github actions will run to deploy the changes into Firebase. Make sure the action workflow ran without issues.
+
+## Local deploy to Firebase
 > **WARNING**
 > Github main branch has automatic action for firebase deploy on PR and MR. 
+1. Once everything is ready for deploy, execute the following command in the directoy where the package.json is.
 ```
 firebase deploy
 ```
 
 # Email.js Configuration
+
+Email.js is a service provider to send emails. To access Email.js: 
 
 Username and password: 
 ```

@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import IconBox from "../../common/IconBox/IconBox"
-import "./HomePage.css";
-import ReglamentoPDF from "../../assets/pdf/Reglamento_TCU.pdf"
-import AboutJPG from "../../assets/img/about.jpg"
 import { useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import IconBox from "../../common/IconBox/IconBox"
+import ReglamentoPDF from "../../data/pdf/Reglamento_TCU.pdf"
+import AboutJPG from "../../assets/img/about.jpg"
 import PureCounter from "@srexi/purecounterjs";
 import Counter from "../../common/Counter/Counter";
-import ProjectList from "../../components/ProjectList/ProjectList";
-import { Col, Container, Row } from "react-bootstrap";
-import projectsJSON from "../../data/projects/projects.json";
+import projectsJSON from "../../data/projects.json";
+import CardList from "../../common/CardList/CardList";
+import "./HomePage.css";
 
 
 
@@ -119,7 +119,7 @@ function HomePage() {
                     </div>
 
 
-                    <ProjectList projects={projectsJSON.projects.slice(0, 3)} />
+                    <CardList cards={projectsJSON.projects.slice(0, 3)} />
                 </Container>
             </section>
 
