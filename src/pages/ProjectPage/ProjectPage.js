@@ -11,7 +11,7 @@ function ProjectPage() {
                 title="Proyectos"
                 supportText="Conoce los proyectos que hemos realizado en el pasado y los que estamos realizando actualmente."
             />
-            <section id="project-page__projects" className="project-page__projects container">
+            <section id="project-page__projects" className="project-page__projects container" data-aos="fade-up">
                 <CardList cards={projectsJSON.projects} />
             </section>
         </div>
