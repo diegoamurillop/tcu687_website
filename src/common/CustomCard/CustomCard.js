@@ -1,11 +1,11 @@
 import Card from 'react-bootstrap/Card';
 import "./CustomCard.css"
 
-function CustomCard({ img, tag, title, description, }) {
+function CustomCard({ img, tag, title, description, date}) {
 
     return (
         <Card >
-            <Card.Img variant="top" src={img} />
+            {img && <Card.Img variant="top" src={img} />}
             <Card.Body>
                 {tag && 
                 (<div className="d-flex mb-3">
@@ -13,7 +13,8 @@ function CustomCard({ img, tag, title, description, }) {
                 </div>) 
                 }
                 <Card.Title as="h3">{title}</Card.Title>
-                <Card.Text>
+                {date && <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>}
+                <Card.Text className="text-justify">
                     {description}
                 </Card.Text>
             </Card.Body>

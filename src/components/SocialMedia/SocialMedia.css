@@ -1,0 +1,20 @@
+.socialmedia-links a {
+    font-size: 28px;
+    display: inline-block;
+    background: #00c0f3;
+    color: #fff;
+    line-height: 1;
+    padding: 9px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 46px;
+    height: 46px;
+    transition: 0.3s;
+  }
+  
+.socialmedia-links a:hover {
+    background: #095fa3;
+    color: #fff;
+    text-decoration: none;
+  }

@@ -2,6 +2,7 @@ import "./ContactPage.css"
 import { Col, Container, Row } from "react-bootstrap";
 import Headline from "../../common/Headline/Headline";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
 
 const ContactPage = () => {
@@ -23,11 +24,14 @@ const ContactPage = () => {
 
 			<section id="contact-page__body" className="contact-page__body">
 				<Container data-aos="fade-up">
+					<div className="mb-5" data-aos="flip-up">
+						<SocialMedia />
+					</div>
 					<Row>
 						<Col lg={4} className="col-lg-4" data-aos="fade-up">
-							<div id="contact-page__info" className="contact-page__info">
+							<div id="contact-page__info" className="contact-page__info mt-3">
 								<div id="contact-page__adress" className="contact-page__address">
-									<i className="bi bi-geo-alt"/>
+									<i className="bi bi-geo-alt" />
 									<h4>Dirección:</h4>
 									<p>SC, Ciudad de la Investigación, frente al INISA</p>
 								</div>

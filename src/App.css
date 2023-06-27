@@ -30,6 +30,16 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

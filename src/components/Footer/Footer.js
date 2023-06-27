@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import ReglamentoPDF from "../../data/pdf/Reglamento_TCU.pdf"
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 
 function Footer() {
@@ -29,7 +31,7 @@ function Footer() {
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/eventos">Eventos</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to ="/sobrenosotros">Sobre Nosotros</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to="/contacto">Contáctenos</Link></li>
-                                <li><i className="bx bx-chevron-right"/> <Link hrefw3w="./assets/files/Reglamento_TCU.pdf" >Reglamento del TCU</Link></li>
+                                <li><i className="bx bx-chevron-right"/> <a href={ReglamentoPDF} >Reglamento del TCU</a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,10 +49,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="footer__social-links text-center text-md-right pt-3 pt-md-0">
-                    <a href="https://www.facebook.com/tcu687"  className="facebook"><i className="bx bxl-facebook"/></a>
-                    <a href="https://www.instagram.com/tc.687"  className="instagram ms-1"><i className="bx bxl-instagram"/></a>
-                    <a href="https://www.tiktok.com/@tc687.hpv"  className="tiktok ms-1"><i className="bx bxl-tiktok"/></a>
-                    <a href="https://open.spotify.com/show/0FogTepPsXNtmI2fO31XvP?si=KYY87PTATpmDEiKeFf042A#"  className="spotify ms-1"><i className="bx bxl-spotify"/></a>
+                    <SocialMedia />
                 </div>
             </div>
         </footer>

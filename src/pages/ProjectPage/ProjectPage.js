@@ -1,6 +1,6 @@
-import ProjectList from "../../components/ProjectList/ProjectList";
 import Headline from "../../common/Headline/Headline";
-import projectsJSON from "../../data/projects/projects.json";
+import projectsJSON from "../../data/projects.json";
+import CardList from "../../common/CardList/CardList";
 import "./ProjectPage.css"
 
 function ProjectPage() {
@@ -11,8 +11,8 @@ function ProjectPage() {
                 title="Proyectos"
                 supportText="Conoce los proyectos que hemos realizado en el pasado y los que estamos realizando actualmente."
             />
-            <section id="project-page__projects" className="project-page__projects container">
-                <ProjectList projects={projectsJSON.projects} />
+            <section id="project-page__projects" className="project-page__projects container" data-aos="fade-up">
+                <CardList cards={projectsJSON.projects} />
             </section>
         </div>
 
