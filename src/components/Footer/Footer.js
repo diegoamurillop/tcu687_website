@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import ReglamentoPDF from "../../data/pdf/Reglamento_TCU.pdf"
 import SocialMedia from "../SocialMedia/SocialMedia";
+import { Col, Row } from "react-bootstrap";
 
 
 function Footer() {
@@ -13,8 +14,8 @@ function Footer() {
         <footer id="footer" className="footer">
             <div className="footer__top">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3 col-md-6 footer__contact">
+                    <Row>
+                        <Col lg={3} md={6} className="footer__contact">
                             <h3>TCU 687</h3>
                             <p>
                                 Escuela de Enfermería<br />
@@ -22,8 +23,8 @@ function Footer() {
                                 Costa Rica<br /><br />
                                 <strong>Email:</strong> tcu687.ee@ucr.ac.cr<br />
                             </p>
-                        </div>
-                        <div className="col-lg-2 col-md-6 footer__links">
+                        </Col>
+                        <Col lg={2} md={6} className="footer__links">
                             <h4>Enlaces de Importancia</h4>
                             <ul>
                                 <li><i className="bx bx-chevron-right"/> <Link  onClick={handleLinkClick} to ="/">Inicio</Link></li>
@@ -33,8 +34,8 @@ function Footer() {
                                 <li><i className="bx bx-chevron-right"/> <Link onClick={handleLinkClick} to="/contacto">Contáctenos</Link></li>
                                 <li><i className="bx bx-chevron-right"/> <a href={ReglamentoPDF} >Reglamento del TCU</a></li>
                             </ul>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                 </div>
 
 
