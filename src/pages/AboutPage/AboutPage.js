@@ -70,7 +70,7 @@ function AboutPage() {
                 </Container>
             </section>
 
-            <section className="about-page__counters section-bg">
+            <section className="about-page__counters section-bg mb-5">
                 <Container>
                     <Row>
                         <Col lg={3} md={6}>

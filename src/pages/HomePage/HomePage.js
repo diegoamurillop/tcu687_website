@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import IconBox from "../../common/IconBox/IconBox"
 import ReglamentoPDF from "../../data/pdf/Reglamento_TCU.pdf"
-import AboutJPG from "../../assets/img/about.jpg"
+import AboutJPG from "../../assets/img/TCU-687.jpg"
 import PureCounter from "@srexi/purecounterjs";
 import Counter from "../../common/Counter/Counter";
 import projectsJSON from "../../data/projects.json";
@@ -26,8 +26,8 @@ function HomePage() {
                 <Container className="position-relative" data-aos="zoom-in" data-aos-delay="100" >
                     <h1>Trabajo Comunal Universitario 687,<br /> Universidad de Costa Rica</h1>
                     <h2>Creación de espacios de fortalecimiento de habilidades para la vida que prevengan el consumo de drogas en la adolescencia y la juventud.</h2>
-                    <Link to="/proyectos" className="btn-get-started">Proyetos</Link>
-                    <Link to="/sobrenosotros" className="btn-get-started ms-2">Sobre Nostros</Link>
+                    <Link to="/proyectos" className="btn-get-started">Proyectos</Link>
+                    <Link to="/sobrenosotros" className="btn-get-started ms-2">Sobre Nosotros</Link>
                 </Container>
             </section>
 
