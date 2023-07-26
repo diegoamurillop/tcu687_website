@@ -1,6 +1,6 @@
-import Headline from "../../common/Headline/Headline";
+import Headline from "../../components/common/Headline/Headline";
 import eventsJSON from "../../data/events.json";
-import CardList from "../../common/CardList/CardList";
+import CardList from "../../components/common/CardList/CardList";
 import "./EventPage.css"
 
 function EventPage() {

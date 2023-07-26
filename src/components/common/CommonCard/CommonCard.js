@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
-import "./CustomCard.css"
+import "./CommonCard.css"
 
-function CustomCard({ img, tag, title, description, date}) {
+function CommonCard({ img, tag, title, description, date}) {
 
     return (
         <Card >
@@ -22,4 +22,4 @@ function CustomCard({ img, tag, title, description, date}) {
     )
 }
 
-export default CustomCard;
+export default CommonCard;

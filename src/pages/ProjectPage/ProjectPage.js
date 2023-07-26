@@ -1,6 +1,6 @@
-import Headline from "../../common/Headline/Headline";
+import Headline from "../../components/common/Headline/Headline";
 import projectsJSON from "../../data/projects.json";
-import CardList from "../../common/CardList/CardList";
+import CardList from "../../components/common/CardList/CardList";
 import "./ProjectPage.css"
 
 function ProjectPage() {

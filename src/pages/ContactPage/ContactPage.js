@@ -1,6 +1,6 @@
 import "./ContactPage.css"
 import { Col, Container, Row } from "react-bootstrap";
-import Headline from "../../common/Headline/Headline";
+import Headline from "../../components/common/Headline/Headline";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
 

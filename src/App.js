@@ -8,7 +8,7 @@ import ProjectPage from './pages/ProjectPage/ProjectPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import EventPage from './pages/EventPage/EventPage';
-import BackToTop from './common/BackToTop/BackToTop';
+import BackToTop from './components/common/BackToTop/BackToTop';
 import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"

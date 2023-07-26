@@ -2,8 +2,8 @@ import "./AboutPage.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
-import Headline from "../../common/Headline/Headline";
-import Counter from "../../common/Counter/Counter";
+import Headline from "../../components/common/Headline/Headline";
+import Counter from "../../components/common/Counter/Counter";
 import AboutJPG from "../../assets/img/about.jpg";
 
 

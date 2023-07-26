@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import IconBox from "../../common/IconBox/IconBox"
+import IconBox from "../../components/common/IconBox/IconBox"
 import ReglamentoPDF from "../../data/pdf/Reglamento_TCU.pdf"
 import AboutJPG from "../../assets/img/TCU-687.jpg"
 import PureCounter from "@srexi/purecounterjs";
-import Counter from "../../common/Counter/Counter";
+import Counter from "../../components/common/Counter/Counter";
 import projectsJSON from "../../data/projects.json";
-import CardList from "../../common/CardList/CardList";
+import CardList from "../../components/common/CardList/CardList";
 import "./HomePage.css";
 
 
